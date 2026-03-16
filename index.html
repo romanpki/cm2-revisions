@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
@@ -25,378 +26,380 @@
     --shadow-lg: 0 16px 48px rgba(91,79,207,0.18);
   }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+- { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 
-  body {
-    font-family: 'Nunito', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
+body {
+font-family: ‘Nunito’, sans-serif;
+background: var(–bg);
+color: var(–text);
+min-height: 100vh;
+overflow-x: hidden;
+}
 
-  /* ── HEADER ── */
-  .app-header {
-    background: white;
-    padding: 18px 24px 14px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
-    position: sticky; top: 0; z-index: 100;
-  }
-  .app-header .logo { font-family: 'Fredoka One', cursive; font-size: 1.6rem; color: var(--histoire-color); }
-  .app-header .subtitle { font-size: 0.85rem; color: var(--text-light); font-weight: 600; }
-  .btn-history {
-    margin-left: auto;
-    background: var(--histoire-light);
-    color: var(--histoire-color);
-    border: none; border-radius: 50px;
-    padding: 8px 18px; font-size: 0.85rem; font-weight: 700;
-    cursor: pointer; font-family: 'Nunito', sans-serif;
-    transition: all 0.2s;
-  }
-  .btn-history:hover { background: var(--histoire-color); color: white; }
+/* ── HEADER ── */
+.app-header {
+background: white;
+padding: 18px 24px 14px;
+display: flex;
+align-items: center;
+gap: 12px;
+box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+position: sticky; top: 0; z-index: 100;
+}
+.app-header .logo { font-family: ‘Fredoka One’, cursive; font-size: 1.6rem; color: var(–histoire-color); }
+.app-header .subtitle { font-size: 0.85rem; color: var(–text-light); font-weight: 600; }
+.btn-history {
+margin-left: auto;
+background: var(–histoire-light);
+color: var(–histoire-color);
+border: none; border-radius: 50px;
+padding: 8px 18px; font-size: 0.85rem; font-weight: 700;
+cursor: pointer; font-family: ‘Nunito’, sans-serif;
+transition: all 0.2s;
+}
+.btn-history:hover { background: var(–histoire-color); color: white; }
 
-  /* ── SCREENS ── */
-  .screen { display: none; }
-  .screen.active { display: block; }
+/* ── SCREENS ── */
+.screen { display: none; }
+.screen.active { display: block; }
 
-  /* ── HOME ── */
-  #home {
-    padding: 28px 20px;
-    max-width: 700px; margin: 0 auto;
-  }
-  .welcome {
-    text-align: center; margin-bottom: 32px;
-  }
-  .welcome h1 { font-family: 'Fredoka One', cursive; font-size: 2.2rem; color: var(--text); line-height: 1.2; }
-  .welcome p { color: var(--text-light); font-size: 1rem; margin-top: 8px; font-weight: 600; }
+/* ── HOME ── */
+#home {
+padding: 28px 20px;
+max-width: 700px; margin: 0 auto;
+}
+.welcome {
+text-align: center; margin-bottom: 32px;
+}
+.welcome h1 { font-family: ‘Fredoka One’, cursive; font-size: 2.2rem; color: var(–text); line-height: 1.2; }
+.welcome p { color: var(–text-light); font-size: 1rem; margin-top: 8px; font-weight: 600; }
 
-  .subject-cards { display: flex; flex-direction: column; gap: 20px; }
+.subject-cards { display: flex; flex-direction: column; gap: 20px; }
 
-  .subject-card {
-    background: white;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-    user-select: none;
-  }
-  .subject-card:active { transform: scale(0.98); }
-  .subject-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+.subject-card {
+background: white;
+border-radius: var(–radius);
+box-shadow: var(–shadow);
+overflow: hidden;
+cursor: pointer;
+transition: transform 0.2s, box-shadow 0.2s;
+user-select: none;
+}
+.subject-card:active { transform: scale(0.98); }
+.subject-card:hover { box-shadow: var(–shadow-lg); transform: translateY(-2px); }
 
-  .subject-card-header {
-    padding: 22px 24px 16px;
-    display: flex; align-items: center; gap: 16px;
-  }
-  .subject-icon { font-size: 2.4rem; }
-  .subject-name { font-family: 'Fredoka One', cursive; font-size: 1.7rem; }
-  .subject-desc { font-size: 0.85rem; color: var(--text-light); font-weight: 600; margin-top: 2px; }
+.subject-card-header {
+padding: 22px 24px 16px;
+display: flex; align-items: center; gap: 16px;
+}
+.subject-icon { font-size: 2.4rem; }
+.subject-name { font-family: ‘Fredoka One’, cursive; font-size: 1.7rem; }
+.subject-desc { font-size: 0.85rem; color: var(–text-light); font-weight: 600; margin-top: 2px; }
 
-  .subject-card.maths .subject-card-header { background: var(--maths-light); }
-  .subject-card.maths .subject-name { color: var(--maths-color); }
-  .subject-card.histoire .subject-card-header { background: var(--histoire-light); }
-  .subject-card.histoire .subject-name { color: var(--histoire-color); }
+.subject-card.maths .subject-card-header { background: var(–maths-light); }
+.subject-card.maths .subject-name { color: var(–maths-color); }
+.subject-card.histoire .subject-card-header { background: var(–histoire-light); }
+.subject-card.histoire .subject-name { color: var(–histoire-color); }
 
-  .subject-card-body { padding: 16px 24px 20px; }
-  .themes-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
-  .theme-chip {
-    background: #F0F0F7; border-radius: 50px;
-    padding: 5px 14px; font-size: 0.8rem; font-weight: 700; color: var(--text-light);
-  }
-  .card-actions { display: flex; gap: 10px; }
-  .btn-action {
-    flex: 1; padding: 14px 10px;
-    border: none; border-radius: 14px;
-    font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.9rem;
-    cursor: pointer; transition: all 0.2s;
-  }
-  .btn-action .badge {
-    display: inline-block; font-size: 0.7rem;
-    background: rgba(255,255,255,0.3); border-radius: 50px;
-    padding: 2px 8px; margin-left: 4px;
-  }
-  .maths .btn-qcm { background: var(--maths-color); color: white; }
-  .maths .btn-ouvert { background: var(--maths-light); color: var(--maths-dark); }
-  .maths .btn-cours { background: #FFF8F0; color: var(--maths-dark); }
-  .histoire .btn-qcm { background: var(--histoire-color); color: white; }
-  .histoire .btn-ouvert { background: var(--histoire-light); color: var(--histoire-dark); }
-  .histoire .btn-cours { background: #F5F4FF; color: var(--histoire-dark); }
+.subject-card-body { padding: 16px 24px 20px; }
+.themes-list { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.theme-chip {
+background: #F0F0F7; border-radius: 50px;
+padding: 5px 14px; font-size: 0.8rem; font-weight: 700; color: var(–text-light);
+}
+.card-actions { display: flex; gap: 10px; }
+.btn-action {
+flex: 1; padding: 14px 10px;
+border: none; border-radius: 14px;
+font-family: ‘Nunito’, sans-serif; font-weight: 800; font-size: 0.9rem;
+cursor: pointer; transition: all 0.2s;
+}
+.btn-action .badge {
+display: inline-block; font-size: 0.7rem;
+background: rgba(255,255,255,0.3); border-radius: 50px;
+padding: 2px 8px; margin-left: 4px;
+}
+.maths .btn-qcm { background: var(–maths-color); color: white; }
+.maths .btn-ouvert { background: var(–maths-light); color: var(–maths-dark); }
+.maths .btn-cours { background: #FFF8F0; color: var(–maths-dark); }
+.histoire .btn-qcm { background: var(–histoire-color); color: white; }
+.histoire .btn-ouvert { background: var(–histoire-light); color: var(–histoire-dark); }
+.histoire .btn-cours { background: #F5F4FF; color: var(–histoire-dark); }
 
-  /* ── COURS ── */
-  #cours {
-    padding: 0;
-    max-width: 700px; margin: 0 auto;
-  }
-  .cours-header {
-    padding: 20px 24px 16px;
-    display: flex; align-items: center; gap: 14px;
-  }
-  .btn-back {
-    background: none; border: none; font-size: 1.5rem; cursor: pointer;
-    width: 40px; height: 40px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    transition: background 0.2s;
-  }
-  .btn-back:hover { background: rgba(0,0,0,0.08); }
-  .cours-title { font-family: 'Fredoka One', cursive; font-size: 1.4rem; }
-  .cours-body { padding: 0 20px 40px; }
-  .theme-section { margin-bottom: 28px; }
-  .theme-title {
-    font-family: 'Fredoka One', cursive; font-size: 1.1rem;
-    margin-bottom: 12px; padding: 10px 16px; border-radius: 12px;
-  }
-  .maths-theme { background: var(--maths-light); color: var(--maths-dark); }
-  .histoire-theme { background: var(--histoire-light); color: var(--histoire-dark); }
-  .cours-content {
-    background: white; border-radius: 16px; padding: 18px 20px;
-    box-shadow: var(--shadow); line-height: 1.7; font-size: 0.95rem;
-  }
-  .cours-content h4 { font-weight: 800; margin-bottom: 6px; color: var(--text); }
-  .cours-content p { color: #444; margin-bottom: 10px; }
-  .cours-content ul { padding-left: 20px; color: #444; }
-  .cours-content li { margin-bottom: 5px; }
-  .cours-content .exemple {
-    background: #F8F8FF; border-left: 3px solid var(--histoire-color);
-    padding: 10px 14px; border-radius: 0 10px 10px 0; margin: 10px 0;
-    font-style: italic; font-size: 0.9rem;
-  }
-  .cours-content .regle {
-    background: #FFF8F0; border-left: 3px solid var(--maths-color);
-    padding: 10px 14px; border-radius: 0 10px 10px 0; margin: 10px 0;
-    font-weight: 700;
-  }
+/* ── COURS ── */
+#cours {
+padding: 0;
+max-width: 700px; margin: 0 auto;
+}
+.cours-header {
+padding: 20px 24px 16px;
+display: flex; align-items: center; gap: 14px;
+}
+.btn-back {
+background: none; border: none; font-size: 1.5rem; cursor: pointer;
+width: 40px; height: 40px; border-radius: 50%;
+display: flex; align-items: center; justify-content: center;
+transition: background 0.2s;
+}
+.btn-back:hover { background: rgba(0,0,0,0.08); }
+.cours-title { font-family: ‘Fredoka One’, cursive; font-size: 1.4rem; }
+.cours-body { padding: 0 20px 40px; }
+.theme-section { margin-bottom: 28px; }
+.theme-title {
+font-family: ‘Fredoka One’, cursive; font-size: 1.1rem;
+margin-bottom: 12px; padding: 10px 16px; border-radius: 12px;
+}
+.maths-theme { background: var(–maths-light); color: var(–maths-dark); }
+.histoire-theme { background: var(–histoire-light); color: var(–histoire-dark); }
+.cours-content {
+background: white; border-radius: 16px; padding: 18px 20px;
+box-shadow: var(–shadow); line-height: 1.7; font-size: 0.95rem;
+}
+.cours-content h4 { font-weight: 800; margin-bottom: 6px; color: var(–text); }
+.cours-content p { color: #444; margin-bottom: 10px; }
+.cours-content ul { padding-left: 20px; color: #444; }
+.cours-content li { margin-bottom: 5px; }
+.cours-content .exemple {
+background: #F8F8FF; border-left: 3px solid var(–histoire-color);
+padding: 10px 14px; border-radius: 0 10px 10px 0; margin: 10px 0;
+font-style: italic; font-size: 0.9rem;
+}
+.cours-content .regle {
+background: #FFF8F0; border-left: 3px solid var(–maths-color);
+padding: 10px 14px; border-radius: 0 10px 10px 0; margin: 10px 0;
+font-weight: 700;
+}
 
-  /* ── QUIZ ── */
-  #quiz {
-    padding: 0;
-    max-width: 700px; margin: 0 auto;
-  }
-  .quiz-header {
-    padding: 20px 24px 16px;
-    display: flex; align-items: center; gap: 12px;
-  }
-  .quiz-meta { flex: 1; }
-  .quiz-meta h2 { font-family: 'Fredoka One', cursive; font-size: 1.2rem; }
-  .quiz-progress-text { font-size: 0.8rem; color: var(--text-light); font-weight: 700; }
-  .progress-bar-wrap {
-    height: 8px; background: #E5E5EF; border-radius: 50px; margin: 12px 24px;
-  }
-  .progress-bar-fill {
-    height: 100%; border-radius: 50px;
-    transition: width 0.4s ease;
-  }
-  .maths-bar { background: var(--maths-color); }
-  .histoire-bar { background: var(--histoire-color); }
+/* ── QUIZ ── */
+#quiz {
+padding: 0;
+max-width: 700px; margin: 0 auto;
+}
+.quiz-header {
+padding: 20px 24px 16px;
+display: flex; align-items: center; gap: 12px;
+}
+.quiz-meta { flex: 1; }
+.quiz-meta h2 { font-family: ‘Fredoka One’, cursive; font-size: 1.2rem; }
+.quiz-progress-text { font-size: 0.8rem; color: var(–text-light); font-weight: 700; }
+.progress-bar-wrap {
+height: 8px; background: #E5E5EF; border-radius: 50px; margin: 12px 24px;
+}
+.progress-bar-fill {
+height: 100%; border-radius: 50px;
+transition: width 0.4s ease;
+}
+.maths-bar { background: var(–maths-color); }
+.histoire-bar { background: var(–histoire-color); }
 
-  .quiz-body { padding: 8px 20px 40px; }
+.quiz-body { padding: 8px 20px 40px; }
 
-  .question-card {
-    background: white; border-radius: var(--radius); padding: 24px;
-    box-shadow: var(--shadow); margin-bottom: 20px;
-  }
-  .question-theme-tag {
-    font-size: 0.75rem; font-weight: 800; text-transform: uppercase;
-    letter-spacing: 0.05em; margin-bottom: 12px; opacity: 0.6;
-  }
-  .question-text {
-    font-size: 1.1rem; font-weight: 700; line-height: 1.5; margin-bottom: 20px;
-  }
+.question-card {
+background: white; border-radius: var(–radius); padding: 24px;
+box-shadow: var(–shadow); margin-bottom: 20px;
+}
+.question-theme-tag {
+font-size: 0.75rem; font-weight: 800; text-transform: uppercase;
+letter-spacing: 0.05em; margin-bottom: 12px; opacity: 0.6;
+}
+.question-text {
+font-size: 1.1rem; font-weight: 700; line-height: 1.5; margin-bottom: 20px;
+}
 
-  /* QCM choices */
-  .choices { display: flex; flex-direction: column; gap: 10px; }
-  .choice-btn {
-    background: #F7F5FF; border: 2.5px solid transparent;
-    border-radius: 14px; padding: 14px 18px;
-    font-family: 'Nunito', sans-serif; font-size: 0.95rem; font-weight: 700;
-    text-align: left; cursor: pointer; transition: all 0.2s;
-    color: var(--text);
-  }
-  .choice-btn:hover { border-color: var(--histoire-color); background: var(--histoire-light); }
-  .choice-btn.selected { border-color: var(--histoire-color); background: var(--histoire-light); }
-  .choice-btn.correct { border-color: var(--success); background: #EAFAF1; color: #1A7A45; }
-  .choice-btn.wrong { border-color: var(--error); background: #FDECEA; color: #A02020; }
-  .choice-btn:disabled { cursor: default; }
+/* QCM choices */
+.choices { display: flex; flex-direction: column; gap: 10px; }
+.choice-btn {
+background: #F7F5FF; border: 2.5px solid transparent;
+border-radius: 14px; padding: 14px 18px;
+font-family: ‘Nunito’, sans-serif; font-size: 0.95rem; font-weight: 700;
+text-align: left; cursor: pointer; transition: all 0.2s;
+color: var(–text);
+}
+.choice-btn:hover { border-color: var(–histoire-color); background: var(–histoire-light); }
+.choice-btn.selected { border-color: var(–histoire-color); background: var(–histoire-light); }
+.choice-btn.correct { border-color: var(–success); background: #EAFAF1; color: #1A7A45; }
+.choice-btn.wrong { border-color: var(–error); background: #FDECEA; color: #A02020; }
+.choice-btn:disabled { cursor: default; }
 
-  /* Open question */
-  .open-answer {
-    width: 100%; min-height: 120px; padding: 14px 16px;
-    border: 2.5px solid #E5E5EF; border-radius: 14px;
-    font-family: 'Nunito', sans-serif; font-size: 0.95rem; font-weight: 600;
-    resize: none; outline: none; transition: border 0.2s;
-    color: var(--text);
-  }
-  .open-answer:focus { border-color: var(--histoire-color); }
+/* Open question */
+.open-answer {
+width: 100%; min-height: 120px; padding: 14px 16px;
+border: 2.5px solid #E5E5EF; border-radius: 14px;
+font-family: ‘Nunito’, sans-serif; font-size: 0.95rem; font-weight: 600;
+resize: none; outline: none; transition: border 0.2s;
+color: var(–text);
+}
+.open-answer:focus { border-color: var(–histoire-color); }
 
-  .btn-submit {
-    width: 100%; padding: 16px; margin-top: 12px;
-    border: none; border-radius: 14px;
-    font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 800;
-    cursor: pointer; transition: all 0.2s;
-  }
-  .btn-submit:disabled { opacity: 0.5; cursor: default; }
+.btn-submit {
+width: 100%; padding: 16px; margin-top: 12px;
+border: none; border-radius: 14px;
+font-family: ‘Nunito’, sans-serif; font-size: 1rem; font-weight: 800;
+cursor: pointer; transition: all 0.2s;
+}
+.btn-submit:disabled { opacity: 0.5; cursor: default; }
 
-  .feedback-block {
-    background: #F8F8FF; border-radius: 14px; padding: 16px 18px; margin-top: 14px;
-    display: none; line-height: 1.6; font-size: 0.92rem;
-  }
-  .feedback-block.show { display: block; }
-  .feedback-block.good { background: #EAFAF1; border-left: 4px solid var(--success); }
-  .feedback-block.bad { background: #FDECEA; border-left: 4px solid var(--error); }
-  .feedback-label { font-weight: 800; font-size: 0.85rem; margin-bottom: 4px; }
+.feedback-block {
+background: #F8F8FF; border-radius: 14px; padding: 16px 18px; margin-top: 14px;
+display: none; line-height: 1.6; font-size: 0.92rem;
+}
+.feedback-block.show { display: block; }
+.feedback-block.good { background: #EAFAF1; border-left: 4px solid var(–success); }
+.feedback-block.bad { background: #FDECEA; border-left: 4px solid var(–error); }
+.feedback-label { font-weight: 800; font-size: 0.85rem; margin-bottom: 4px; }
 
-  .btn-next {
-    width: 100%; padding: 16px; margin-top: 12px;
-    border: none; border-radius: 14px;
-    font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 800;
-    cursor: pointer; color: white; display: none;
-    transition: all 0.2s;
-  }
-  .btn-next.show { display: block; }
+.btn-next {
+width: 100%; padding: 16px; margin-top: 12px;
+border: none; border-radius: 14px;
+font-family: ‘Nunito’, sans-serif; font-size: 1rem; font-weight: 800;
+cursor: pointer; color: white; display: none;
+transition: all 0.2s;
+}
+.btn-next.show { display: block; }
 
-  /* Loading */
-  .loading-block {
-    text-align: center; padding: 40px 20px; display: none;
-  }
-  .loading-block.show { display: block; }
-  .spinner {
-    width: 48px; height: 48px; border-radius: 50%;
-    border: 5px solid #E5E5EF;
-    border-top-color: var(--histoire-color);
-    animation: spin 0.8s linear infinite;
-    margin: 0 auto 16px;
-  }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  .loading-text { font-weight: 700; color: var(--text-light); font-size: 0.95rem; }
+/* Loading */
+.loading-block {
+text-align: center; padding: 40px 20px; display: none;
+}
+.loading-block.show { display: block; }
+.spinner {
+width: 48px; height: 48px; border-radius: 50%;
+border: 5px solid #E5E5EF;
+border-top-color: var(–histoire-color);
+animation: spin 0.8s linear infinite;
+margin: 0 auto 16px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.loading-text { font-weight: 700; color: var(–text-light); font-size: 0.95rem; }
 
-  /* ── RESULTS ── */
-  #results {
-    padding: 0; max-width: 700px; margin: 0 auto;
-  }
-  .results-header {
-    padding: 20px 24px 16px;
-    display: flex; align-items: center; gap: 12px;
-  }
-  .results-body { padding: 0 20px 40px; }
+/* ── RESULTS ── */
+#results {
+padding: 0; max-width: 700px; margin: 0 auto;
+}
+.results-header {
+padding: 20px 24px 16px;
+display: flex; align-items: center; gap: 12px;
+}
+.results-body { padding: 0 20px 40px; }
 
-  .score-card {
-    background: white; border-radius: var(--radius); padding: 32px 24px;
-    box-shadow: var(--shadow); text-align: center; margin-bottom: 20px;
-  }
-  .score-emoji { font-size: 4rem; margin-bottom: 8px; }
-  .score-number { font-family: 'Fredoka One', cursive; font-size: 3.5rem; }
-  .score-label { color: var(--text-light); font-weight: 700; font-size: 0.95rem; margin-top: 4px; }
-  .score-msg { font-weight: 700; font-size: 1rem; margin-top: 12px; color: var(--text); }
+.score-card {
+background: white; border-radius: var(–radius); padding: 32px 24px;
+box-shadow: var(–shadow); text-align: center; margin-bottom: 20px;
+}
+.score-emoji { font-size: 4rem; margin-bottom: 8px; }
+.score-number { font-family: ‘Fredoka One’, cursive; font-size: 3.5rem; }
+.score-label { color: var(–text-light); font-weight: 700; font-size: 0.95rem; margin-top: 4px; }
+.score-msg { font-weight: 700; font-size: 1rem; margin-top: 12px; color: var(–text); }
 
-  .results-review { display: flex; flex-direction: column; gap: 14px; margin-bottom: 20px; }
-  .result-item {
-    background: white; border-radius: 16px; padding: 16px 18px;
-    box-shadow: var(--shadow); border-left: 4px solid #E5E5EF;
-  }
-  .result-item.correct-item { border-left-color: var(--success); }
-  .result-item.wrong-item { border-left-color: var(--error); }
-  .result-q { font-weight: 700; font-size: 0.9rem; margin-bottom: 6px; }
-  .result-answer { font-size: 0.85rem; color: var(--text-light); font-weight: 600; }
-  .result-answer span { font-weight: 800; }
-  .result-correct { color: #1A7A45; }
-  .result-wrong { color: #A02020; }
+.results-review { display: flex; flex-direction: column; gap: 14px; margin-bottom: 20px; }
+.result-item {
+background: white; border-radius: 16px; padding: 16px 18px;
+box-shadow: var(–shadow); border-left: 4px solid #E5E5EF;
+}
+.result-item.correct-item { border-left-color: var(–success); }
+.result-item.wrong-item { border-left-color: var(–error); }
+.result-q { font-weight: 700; font-size: 0.9rem; margin-bottom: 6px; }
+.result-answer { font-size: 0.85rem; color: var(–text-light); font-weight: 600; }
+.result-answer span { font-weight: 800; }
+.result-correct { color: #1A7A45; }
+.result-wrong { color: #A02020; }
 
-  .btn-primary {
-    width: 100%; padding: 18px; border: none; border-radius: 16px;
-    font-family: 'Nunito', sans-serif; font-size: 1.05rem; font-weight: 800;
-    cursor: pointer; color: white; margin-bottom: 12px; transition: all 0.2s;
-  }
-  .btn-secondary {
-    width: 100%; padding: 16px; border: 2.5px solid #E5E5EF; border-radius: 16px;
-    background: white; font-family: 'Nunito', sans-serif; font-size: 1rem; font-weight: 700;
-    cursor: pointer; color: var(--text); transition: all 0.2s;
-  }
-  .btn-secondary:hover { border-color: var(--histoire-color); color: var(--histoire-color); }
+.btn-primary {
+width: 100%; padding: 18px; border: none; border-radius: 16px;
+font-family: ‘Nunito’, sans-serif; font-size: 1.05rem; font-weight: 800;
+cursor: pointer; color: white; margin-bottom: 12px; transition: all 0.2s;
+}
+.btn-secondary {
+width: 100%; padding: 16px; border: 2.5px solid #E5E5EF; border-radius: 16px;
+background: white; font-family: ‘Nunito’, sans-serif; font-size: 1rem; font-weight: 700;
+cursor: pointer; color: var(–text); transition: all 0.2s;
+}
+.btn-secondary:hover { border-color: var(–histoire-color); color: var(–histoire-color); }
 
-  /* ── HISTORY ── */
-  #history {
-    padding: 0; max-width: 700px; margin: 0 auto;
-  }
-  .history-header {
-    padding: 20px 24px 16px;
-    display: flex; align-items: center; gap: 12px;
-  }
-  .history-body { padding: 0 20px 40px; }
-  .history-empty {
-    text-align: center; padding: 60px 20px; color: var(--text-light);
-  }
-  .history-empty .big-icon { font-size: 3rem; margin-bottom: 12px; }
-  .history-empty p { font-weight: 700; }
-  .history-stats {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px;
-  }
-  .stat-card {
-    background: white; border-radius: 16px; padding: 18px 16px;
-    box-shadow: var(--shadow); text-align: center;
-  }
-  .stat-num { font-family: 'Fredoka One', cursive; font-size: 2rem; }
-  .stat-label { font-size: 0.8rem; font-weight: 700; color: var(--text-light); margin-top: 2px; }
-  .history-list { display: flex; flex-direction: column; gap: 12px; }
-  .history-item {
-    background: white; border-radius: 16px; padding: 16px 18px;
-    box-shadow: var(--shadow); display: flex; align-items: center; gap: 14px;
-  }
-  .history-badge {
-    width: 52px; height: 52px; border-radius: 14px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 1.5rem; flex-shrink: 0;
-  }
-  .history-badge.maths { background: var(--maths-light); }
-  .history-badge.histoire { background: var(--histoire-light); }
-  .history-info { flex: 1; }
-  .history-info h4 { font-weight: 800; font-size: 0.95rem; }
-  .history-info p { font-size: 0.8rem; color: var(--text-light); font-weight: 600; margin-top: 2px; }
-  .history-score { font-family: 'Fredoka One', cursive; font-size: 1.4rem; }
-  .score-good { color: var(--success); }
-  .score-mid { color: #F39C12; }
-  .score-bad { color: var(--error); }
+/* ── HISTORY ── */
+#history {
+padding: 0; max-width: 700px; margin: 0 auto;
+}
+.history-header {
+padding: 20px 24px 16px;
+display: flex; align-items: center; gap: 12px;
+}
+.history-body { padding: 0 20px 40px; }
+.history-empty {
+text-align: center; padding: 60px 20px; color: var(–text-light);
+}
+.history-empty .big-icon { font-size: 3rem; margin-bottom: 12px; }
+.history-empty p { font-weight: 700; }
+.history-stats {
+display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px;
+}
+.stat-card {
+background: white; border-radius: 16px; padding: 18px 16px;
+box-shadow: var(–shadow); text-align: center;
+}
+.stat-num { font-family: ‘Fredoka One’, cursive; font-size: 2rem; }
+.stat-label { font-size: 0.8rem; font-weight: 700; color: var(–text-light); margin-top: 2px; }
+.history-list { display: flex; flex-direction: column; gap: 12px; }
+.history-item {
+background: white; border-radius: 16px; padding: 16px 18px;
+box-shadow: var(–shadow); display: flex; align-items: center; gap: 14px;
+}
+.history-badge {
+width: 52px; height: 52px; border-radius: 14px;
+display: flex; align-items: center; justify-content: center;
+font-size: 1.5rem; flex-shrink: 0;
+}
+.history-badge.maths { background: var(–maths-light); }
+.history-badge.histoire { background: var(–histoire-light); }
+.history-info { flex: 1; }
+.history-info h4 { font-weight: 800; font-size: 0.95rem; }
+.history-info p { font-size: 0.8rem; color: var(–text-light); font-weight: 600; margin-top: 2px; }
+.history-score { font-family: ‘Fredoka One’, cursive; font-size: 1.4rem; }
+.score-good { color: var(–success); }
+.score-mid { color: #F39C12; }
+.score-bad { color: var(–error); }
 
-  .btn-clear {
-    width: 100%; padding: 14px; border: 2.5px solid #FDECEA; border-radius: 14px;
-    background: white; color: var(--error); font-family: 'Nunito', sans-serif;
-    font-size: 0.9rem; font-weight: 700; cursor: pointer; margin-top: 16px;
-    transition: all 0.2s;
-  }
-  .btn-clear:hover { background: #FDECEA; }
+.btn-clear {
+width: 100%; padding: 14px; border: 2.5px solid #FDECEA; border-radius: 14px;
+background: white; color: var(–error); font-family: ‘Nunito’, sans-serif;
+font-size: 0.9rem; font-weight: 700; cursor: pointer; margin-top: 16px;
+transition: all 0.2s;
+}
+.btn-clear:hover { background: #FDECEA; }
 
-  /* API KEY config */
-  .api-key-bar {
-    background: #FFF8F0; border-top: 2px solid var(--maths-light);
-    padding: 14px 20px; text-align: center; font-size: 0.82rem; font-weight: 700;
-    color: var(--maths-dark); display: flex; align-items: center; justify-content: center; gap: 10px;
-  }
-  .api-key-input {
-    padding: 6px 12px; border: 2px solid var(--maths-light); border-radius: 8px;
-    font-family: 'Nunito', sans-serif; font-size: 0.8rem; font-weight: 600;
-    outline: none; width: 220px; color: var(--text);
-  }
-  .btn-save-key {
-    padding: 6px 14px; background: var(--maths-color); color: white;
-    border: none; border-radius: 8px; font-family: 'Nunito', sans-serif;
-    font-size: 0.8rem; font-weight: 800; cursor: pointer;
-  }
-  .key-ok { color: var(--success); }
+/* API KEY config */
+.api-key-bar {
+background: #FFF8F0; border-top: 2px solid var(–maths-light);
+padding: 14px 20px; text-align: center; font-size: 0.82rem; font-weight: 700;
+color: var(–maths-dark); display: flex; align-items: center; justify-content: center; gap: 10px;
+}
+.api-key-input {
+padding: 6px 12px; border: 2px solid var(–maths-light); border-radius: 8px;
+font-family: ‘Nunito’, sans-serif; font-size: 0.8rem; font-weight: 600;
+outline: none; width: 220px; color: var(–text);
+}
+.btn-save-key {
+padding: 6px 14px; background: var(–maths-color); color: white;
+border: none; border-radius: 8px; font-family: ‘Nunito’, sans-serif;
+font-size: 0.8rem; font-weight: 800; cursor: pointer;
+}
+.key-ok { color: var(–success); }
 
-  /* Utilities */
-  .maths-color { color: var(--maths-color); }
-  .histoire-color { color: var(--histoire-color); }
-  .maths-bg { background: var(--maths-color); }
-  .histoire-bg { background: var(--histoire-color); }
-  .section-title {
-    font-family: 'Fredoka One', cursive; font-size: 1.2rem; margin-bottom: 14px; color: var(--text-light);
-  }
+/* Utilities */
+.maths-color { color: var(–maths-color); }
+.histoire-color { color: var(–histoire-color); }
+.maths-bg { background: var(–maths-color); }
+.histoire-bg { background: var(–histoire-color); }
+.section-title {
+font-family: ‘Fredoka One’, cursive; font-size: 1.2rem; margin-bottom: 14px; color: var(–text-light);
+}
 </style>
+
 </head>
 <body>
 
 <!-- HEADER -->
+
 <header class="app-header">
   <span class="logo">📚 CM2</span>
   <div>
@@ -407,6 +410,7 @@
 </header>
 
 <!-- API KEY BAR -->
+
 <div class="api-key-bar" id="apiKeyBar">
   🔑 Clé API Anthropic :
   <input type="password" class="api-key-input" id="apiKeyInput" placeholder="sk-ant-..." oninput="saveApiKey()">
@@ -414,6 +418,7 @@
 </div>
 
 <!-- SCREEN: HOME -->
+
 <div id="home" class="screen active">
   <div class="welcome">
     <h1>Bonjour !<br>Prêt à réviser ? 🚀</h1>
@@ -422,48 +427,51 @@
 
   <div class="subject-cards">
 
-    <!-- MATHS -->
-    <div class="subject-card maths">
-      <div class="subject-card-header">
-        <span class="subject-icon">🔢</span>
-        <div>
-          <div class="subject-name">Mathématiques</div>
-          <div class="subject-desc">Nombres, calcul, géométrie, mesures</div>
-        </div>
-      </div>
-      <div class="subject-card-body">
-        <div class="themes-list" id="maths-themes"></div>
-        <div class="card-actions">
-          <button class="btn-action btn-qcm" onclick="startQuiz('maths','qcm')">🎯 QCM <span class="badge">N1</span></button>
-          <button class="btn-action btn-ouvert" onclick="startQuiz('maths','open')">✏️ Questions <span class="badge">N2</span></button>
-          <button class="btn-action btn-cours" onclick="showCours('maths')">📖 Cours</button>
-        </div>
-      </div>
+```
+<!-- MATHS -->
+<div class="subject-card maths">
+  <div class="subject-card-header">
+    <span class="subject-icon">🔢</span>
+    <div>
+      <div class="subject-name">Mathématiques</div>
+      <div class="subject-desc">Nombres, calcul, géométrie, mesures</div>
     </div>
+  </div>
+  <div class="subject-card-body">
+    <div class="themes-list" id="maths-themes"></div>
+    <div class="card-actions">
+      <button class="btn-action btn-qcm" onclick="startQuiz('maths','qcm')">🎯 QCM <span class="badge">N1</span></button>
+      <button class="btn-action btn-ouvert" onclick="startQuiz('maths','open')">✏️ Questions <span class="badge">N2</span></button>
+      <button class="btn-action btn-cours" onclick="showCours('maths')">📖 Cours</button>
+    </div>
+  </div>
+</div>
 
-    <!-- HISTOIRE -->
-    <div class="subject-card histoire">
-      <div class="subject-card-header">
-        <span class="subject-icon">🏛️</span>
-        <div>
-          <div class="subject-name">Histoire</div>
-          <div class="subject-desc">La France de la Révolution à nos jours</div>
-        </div>
-      </div>
-      <div class="subject-card-body">
-        <div class="themes-list" id="histoire-themes"></div>
-        <div class="card-actions">
-          <button class="btn-action btn-qcm" onclick="startQuiz('histoire','qcm')">🎯 QCM <span class="badge">N1</span></button>
-          <button class="btn-action btn-ouvert" onclick="startQuiz('histoire','open')">✏️ Questions <span class="badge">N2</span></button>
-          <button class="btn-action btn-cours" onclick="showCours('histoire')">📖 Cours</button>
-        </div>
-      </div>
+<!-- HISTOIRE -->
+<div class="subject-card histoire">
+  <div class="subject-card-header">
+    <span class="subject-icon">🏛️</span>
+    <div>
+      <div class="subject-name">Histoire</div>
+      <div class="subject-desc">La France de la Révolution à nos jours</div>
     </div>
+  </div>
+  <div class="subject-card-body">
+    <div class="themes-list" id="histoire-themes"></div>
+    <div class="card-actions">
+      <button class="btn-action btn-qcm" onclick="startQuiz('histoire','qcm')">🎯 QCM <span class="badge">N1</span></button>
+      <button class="btn-action btn-ouvert" onclick="startQuiz('histoire','open')">✏️ Questions <span class="badge">N2</span></button>
+      <button class="btn-action btn-cours" onclick="showCours('histoire')">📖 Cours</button>
+    </div>
+  </div>
+</div>
+```
 
   </div>
 </div>
 
 <!-- SCREEN: COURS -->
+
 <div id="cours" class="screen">
   <div class="cours-header" id="cours-header">
     <button class="btn-back" onclick="showScreen('home')">←</button>
@@ -473,6 +481,7 @@
 </div>
 
 <!-- SCREEN: QUIZ -->
+
 <div id="quiz" class="screen">
   <div class="quiz-header">
     <button class="btn-back" onclick="confirmQuit()">←</button>
@@ -494,6 +503,7 @@
 </div>
 
 <!-- SCREEN: RESULTS -->
+
 <div id="results" class="screen">
   <div class="results-header">
     <button class="btn-back" onclick="showScreen('home')">←</button>
@@ -503,6 +513,7 @@
 </div>
 
 <!-- SCREEN: HISTORY -->
+
 <div id="history" class="screen">
   <div class="history-header">
     <button class="btn-back" onclick="showScreen('home')">←</button>
@@ -873,7 +884,7 @@ Réponds UNIQUEMENT en JSON valide, sans markdown, ce format exact :
   try {
     const resp = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01' },
+      headers: { 'Content-Type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
       body: JSON.stringify({
         model: 'claude-sonnet-4-20250514',
         max_tokens: 2000,
@@ -938,217 +949,182 @@ function renderQuestion() {
         <div class="question-theme-tag">${q.theme}</div>
         <div class="question-text">${q.question}</div>
         <textarea class="open-answer" id="open-ans" placeholder="Écris ta réponse ici…"></textarea>
-        <button class="btn-submit ${currentSubject}-bg" id="btn-submit" style="color:white" onclick="submitOpen()">
-          Valider ma réponse ✓
-        </button>
-        <div class="feedback-block" id="feedback"></div>
-        <button class="btn-next ${currentSubject}-bg" id="btn-next" onclick="nextQuestion()">
-          ${currentQ === questions.length - 1 ? 'Voir mes résultats 🎉' : 'Question suivante →'}
-        </button>
-      </div>`;
-  }
+
+```
+    <button class="btn-submit ${currentSubject}-bg" id="btn-submit" style="color:white" onclick="submitOpen()">
+      Valider ma réponse ✓
+    </button>
+    <div class="feedback-block" id="feedback"></div>
+    <button class="btn-next ${currentSubject}-bg" id="btn-next" onclick="nextQuestion()">
+      ${currentQ === questions.length - 1 ? 'Voir mes résultats 🎉' : 'Question suivante →'}
+    </button>
+  </div>`;
+```
+
+}
 }
 
 function selectChoice(idx) {
-  const q = questions[currentQ];
-  const btns = document.querySelectorAll('.choice-btn');
-  btns.forEach(b => b.disabled = true);
+const q = questions[currentQ];
+const btns = document.querySelectorAll(’.choice-btn’);
+btns.forEach(b => b.disabled = true);
 
-  const isCorrect = idx === q.correct;
-  btns[idx].className = 'choice-btn ' + (isCorrect ? 'correct' : 'wrong');
-  if (!isCorrect) btns[q.correct].className = 'choice-btn correct';
+const isCorrect = idx === q.correct;
+btns[idx].className = ’choice-btn ’ + (isCorrect ? ‘correct’ : ‘wrong’);
+if (!isCorrect) btns[q.correct].className = ‘choice-btn correct’;
 
-  sessionResults.push({ q: q.question, mode: 'qcm', correct: isCorrect, theme: q.theme,
-    chosen: q.choices[idx], answer: q.choices[q.correct] });
+sessionResults.push({ q: q.question, mode: ‘qcm’, correct: isCorrect, theme: q.theme,
+chosen: q.choices[idx], answer: q.choices[q.correct] });
 
-  const fb = document.getElementById('feedback');
-  fb.className = 'feedback-block show ' + (isCorrect ? 'good' : 'bad');
-  fb.innerHTML = `<div class="feedback-label">${isCorrect ? '✅ Bravo !' : '❌ Pas tout à fait…'}</div>${q.explanation}`;
+const fb = document.getElementById(‘feedback’);
+fb.className = ’feedback-block show ’ + (isCorrect ? ‘good’ : ‘bad’);
+fb.innerHTML = `<div class="feedback-label">${isCorrect ? '✅ Bravo !' : '❌ Pas tout à fait…'}</div>${q.explanation}`;
 
-  document.getElementById('btn-next').className = 'btn-next show ' + currentSubject + '-bg';
+document.getElementById(‘btn-next’).className = ’btn-next show ’ + currentSubject + ‘-bg’;
 }
 
 async function submitOpen() {
-  const ans = document.getElementById('open-ans').value.trim();
-  if (!ans) return;
+const ans = document.getElementById(‘open-ans’).value.trim();
+if (!ans) return;
 
-  const q = questions[currentQ];
-  document.getElementById('btn-submit').disabled = true;
-  document.getElementById('btn-submit').textContent = '⏳ Correction…';
-  document.getElementById('open-ans').disabled = true;
+const q = questions[currentQ];
+document.getElementById(‘btn-submit’).disabled = true;
+document.getElementById(‘btn-submit’).textContent = ‘⏳ Correction…’;
+document.getElementById(‘open-ans’).disabled = true;
 
-  const corrPrompt = `Tu corriges la réponse d'un élève de CM2.
+const corrPrompt = `Tu corriges la réponse d’un élève de CM2.
 
 Question : ${q.question}
 Réponse attendue : ${q.expected}
-Mots-clés importants : ${q.keywords.join(', ')}
-Réponse de l'élève : "${ans}"
+Mots-clés importants : ${q.keywords.join(’, ‘)}
+Réponse de l’élève : “${ans}”
 
 Évalue si la réponse est correcte, partiellement correcte ou incorrecte.
 Réponds UNIQUEMENT en JSON :
-{"correct": true/false, "partial": true/false, "comment": "Commentaire court et encourageant pour un enfant de 10 ans (1-2 phrases)", "expected": "${q.expected.replace(/"/g, '\\"')}"}`;
+{“correct”: true/false, “partial”: true/false, “comment”: “Commentaire court et encourageant pour un enfant de 10 ans (1-2 phrases)”, “expected”: “${q.expected.replace(/”/g, ‘\”’)}”}`;
 
-  try {
-    const resp = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 400,
-        messages: [{ role: 'user', content: corrPrompt }]
-      })
-    });
-    const json = await resp.json();
-    const text = json.content[0].text.replace(/```json|```/g, '').trim();
-    const result = JSON.parse(text);
+try {
+const resp = await fetch(‘https://api.anthropic.com/v1/messages’, {
+method: ‘POST’,
+headers: { ‘Content-Type’: ‘application/json’, ‘x-api-key’: apiKey, ‘anthropic-version’: ‘2023-06-01’, ‘anthropic-dangerous-direct-browser-access’: ‘true’ },
+body: JSON.stringify({
+model: ‘claude-sonnet-4-20250514’,
+max_tokens: 400,
+messages: [{ role: ‘user’, content: corrPrompt }]
+})
+});
+const json = await resp.json();
+const text = json.content[0].text.replace(/`json|`/g, ‘’).trim();
+const result = JSON.parse(text);
 
-    const isOk = result.correct || result.partial;
-    sessionResults.push({ q: q.question, mode: 'open', correct: result.correct,
-      partial: result.partial, theme: q.theme, answer: q.expected, given: ans });
+```
+const isOk = result.correct || result.partial;
+sessionResults.push({ q: q.question, mode: 'open', correct: result.correct,
+  partial: result.partial, theme: q.theme, answer: q.expected, given: ans });
 
-    const fb = document.getElementById('feedback');
-    fb.className = 'feedback-block show ' + (result.correct ? 'good' : result.partial ? '' : 'bad');
-    fb.innerHTML = `
-      <div class="feedback-label">${result.correct ? '✅ Excellent !' : result.partial ? '🟡 Partiellement correct' : '❌ À revoir'}</div>
-      <p>${result.comment}</p>
-      ${!result.correct ? `<p style="margin-top:8px"><strong>Réponse complète :</strong> ${result.expected}</p>` : ''}
-    `;
-    document.getElementById('btn-submit').style.display = 'none';
-    document.getElementById('btn-next').className = 'btn-next show ' + currentSubject + '-bg';
-  } catch(e) {
-    document.getElementById('btn-submit').disabled = false;
-    document.getElementById('btn-submit').textContent = 'Réessayer';
-  }
+const fb = document.getElementById('feedback');
+fb.className = 'feedback-block show ' + (result.correct ? 'good' : result.partial ? '' : 'bad');
+fb.innerHTML = `
+  <div class="feedback-label">${result.correct ? '✅ Excellent !' : result.partial ? '🟡 Partiellement correct' : '❌ À revoir'}</div>
+  <p>${result.comment}</p>
+  ${!result.correct ? `<p style="margin-top:8px"><strong>Réponse complète :</strong> ${result.expected}</p>` : ''}
+`;
+document.getElementById('btn-submit').style.display = 'none';
+document.getElementById('btn-next').className = 'btn-next show ' + currentSubject + '-bg';
+```
+
+} catch(e) {
+document.getElementById(‘btn-submit’).disabled = false;
+document.getElementById(‘btn-submit’).textContent = ‘Réessayer’;
+}
 }
 
 function nextQuestion() {
-  currentQ++;
-  renderQuestion();
-  window.scrollTo(0, 0);
+currentQ++;
+renderQuestion();
+window.scrollTo(0, 0);
 }
 
 function confirmQuit() {
-  if (questions.length === 0 || currentQ === 0) { showScreen('home'); return; }
-  if (confirm('Quitter le quiz ? Tes réponses ne seront pas enregistrées.')) showScreen('home');
+if (questions.length === 0 || currentQ === 0) { showScreen(‘home’); return; }
+if (confirm(‘Quitter le quiz ? Tes réponses ne seront pas enregistrées.’)) showScreen(‘home’);
 }
 
 // ══════════════════════════════════════════════
 // RESULTS
 // ══════════════════════════════════════════════
 function showResults() {
-  const sub = COURS[currentSubject];
-  const correct = sessionResults.filter(r => r.correct).length;
-  const partial = sessionResults.filter(r => r.partial && !r.correct).length;
-  const total = sessionResults.length;
-  const score = correct + Math.round(partial * 0.5);
-  const pct = Math.round((score / total) * 100);
+const sub = COURS[currentSubject];
+const correct = sessionResults.filter(r => r.correct).length;
+const partial = sessionResults.filter(r => r.partial && !r.correct).length;
+const total = sessionResults.length;
+const score = correct + Math.round(partial * 0.5);
+const pct = Math.round((score / total) * 100);
 
-  // Save to history
-  const entry = {
-    id: Date.now(),
-    subject: currentSubject,
-    mode: currentMode,
-    date: new Date().toLocaleDateString('fr-FR'),
-    score, total, pct,
-    results: sessionResults
-  };
-  const hist = JSON.parse(localStorage.getItem('cm2_history') || '[]');
-  hist.unshift(entry);
-  localStorage.setItem('cm2_history', JSON.stringify(hist.slice(0, 50)));
+// Save to history
+const entry = {
+id: Date.now(),
+subject: currentSubject,
+mode: currentMode,
+date: new Date().toLocaleDateString(‘fr-FR’),
+score, total, pct,
+results: sessionResults
+};
+const hist = JSON.parse(localStorage.getItem(‘cm2_history’) || ‘[]’);
+hist.unshift(entry);
+localStorage.setItem(‘cm2_history’, JSON.stringify(hist.slice(0, 50)));
 
-  document.getElementById('results-title').textContent = sub.icon + ' Résultats';
+document.getElementById(‘results-title’).textContent = sub.icon + ’ Résultats’;
 
-  const emoji = pct >= 80 ? '🌟' : pct >= 60 ? '👍' : pct >= 40 ? '💪' : '📚';
-  const msg = pct >= 80 ? 'Excellent travail, continue comme ça !' : pct >= 60 ? 'Bon résultat, tu peux encore progresser !' : pct >= 40 ? 'Continue les efforts, tu vas y arriver !' : 'Relis le cours et réessaie !';
+const emoji = pct >= 80 ? ‘🌟’ : pct >= 60 ? ‘👍’ : pct >= 40 ? ‘💪’ : ‘📚’;
+const msg = pct >= 80 ? ‘Excellent travail, continue comme ça !’ : pct >= 60 ? ‘Bon résultat, tu peux encore progresser !’ : pct >= 40 ? ‘Continue les efforts, tu vas y arriver !’ : ‘Relis le cours et réessaie !’;
 
-  let reviewHTML = sessionResults.map(r => `
-    <div class="result-item ${r.correct ? 'correct-item' : 'wrong-item'}">
-      <div class="result-q">${r.q}</div>
-      <div class="result-answer">
-        ${r.correct ? '<span class="result-correct">✓ Correct</span>' : r.partial ? '<span style="color:#F39C12">◑ Partiel</span>' : '<span class="result-wrong">✗ Incorrect</span>'}
-        ${!r.correct ? ` · <span style="color:var(--text-light)">Réponse : </span><span>${r.answer}</span>` : ''}
-      </div>
-    </div>`).join('');
+let reviewHTML = sessionResults.map(r => `<div class="result-item ${r.correct ? 'correct-item' : 'wrong-item'}"> <div class="result-q">${r.q}</div> <div class="result-answer"> ${r.correct ? '<span class="result-correct">✓ Correct</span>' : r.partial ? '<span style="color:#F39C12">◑ Partiel</span>' : '<span class="result-wrong">✗ Incorrect</span>'} ${!r.correct ?` · <span style="color:var(--text-light)">Réponse : </span><span>${r.answer}</span>` : ''} </div> </div>`).join(’’);
 
-  document.getElementById('results-body').innerHTML = `
-    <div class="score-card">
-      <div class="score-emoji">${emoji}</div>
-      <div class="score-number ${currentSubject}-color">${score}/${total}</div>
-      <div class="score-label">${pct}% de réussite · ${currentMode === 'qcm' ? 'QCM' : 'Questions ouvertes'}</div>
-      <div class="score-msg">${msg}</div>
-    </div>
-    <div class="section-title">Détail des réponses</div>
-    <div class="results-review">${reviewHTML}</div>
-    <button class="btn-primary ${currentSubject}-bg" onclick="startQuiz('${currentSubject}','${currentMode}')">🔄 Rejouer</button>
-    <button class="btn-primary ${currentSubject === 'maths' ? 'histoire' : 'maths'}-bg" onclick="startQuiz('${currentSubject === 'maths' ? 'histoire' : 'maths'}','${currentMode}')">Essayer en ${currentSubject === 'maths' ? 'Histoire 🏛️' : 'Maths 🔢'}</button>
-    <button class="btn-secondary" onclick="showScreen('home')">🏠 Accueil</button>
-  `;
+document.getElementById(‘results-body’).innerHTML = `<div class="score-card"> <div class="score-emoji">${emoji}</div> <div class="score-number ${currentSubject}-color">${score}/${total}</div> <div class="score-label">${pct}% de réussite · ${currentMode === 'qcm' ? 'QCM' : 'Questions ouvertes'}</div> <div class="score-msg">${msg}</div> </div> <div class="section-title">Détail des réponses</div> <div class="results-review">${reviewHTML}</div> <button class="btn-primary ${currentSubject}-bg" onclick="startQuiz('${currentSubject}','${currentMode}')">🔄 Rejouer</button> <button class="btn-primary ${currentSubject === 'maths' ? 'histoire' : 'maths'}-bg" onclick="startQuiz('${currentSubject === 'maths' ? 'histoire' : 'maths'}','${currentMode}')">Essayer en ${currentSubject === 'maths' ? 'Histoire 🏛️' : 'Maths 🔢'}</button> <button class="btn-secondary" onclick="showScreen('home')">🏠 Accueil</button>`;
 
-  showScreen('results');
+showScreen(‘results’);
 }
 
 // ══════════════════════════════════════════════
 // HISTORY
 // ══════════════════════════════════════════════
 function renderHistory() {
-  const hist = JSON.parse(localStorage.getItem('cm2_history') || '[]');
-  const body = document.getElementById('history-body');
+const hist = JSON.parse(localStorage.getItem(‘cm2_history’) || ‘[]’);
+const body = document.getElementById(‘history-body’);
 
-  if (hist.length === 0) {
-    body.innerHTML = `<div class="history-empty"><div class="big-icon">🎯</div><p>Pas encore de sessions terminées.<br>Lance un quiz pour commencer !</p></div>`;
-    return;
-  }
+if (hist.length === 0) {
+body.innerHTML = `<div class="history-empty"><div class="big-icon">🎯</div><p>Pas encore de sessions terminées.<br>Lance un quiz pour commencer !</p></div>`;
+return;
+}
 
-  const totalSessions = hist.length;
-  const avgScore = Math.round(hist.reduce((s, h) => s + h.pct, 0) / hist.length);
-  const mathsSessions = hist.filter(h => h.subject === 'maths').length;
-  const histSessions = hist.filter(h => h.subject === 'histoire').length;
+const totalSessions = hist.length;
+const avgScore = Math.round(hist.reduce((s, h) => s + h.pct, 0) / hist.length);
+const mathsSessions = hist.filter(h => h.subject === ‘maths’).length;
+const histSessions = hist.filter(h => h.subject === ‘histoire’).length;
 
-  const scoreClass = p => p >= 80 ? 'score-good' : p >= 50 ? 'score-mid' : 'score-bad';
+const scoreClass = p => p >= 80 ? ‘score-good’ : p >= 50 ? ‘score-mid’ : ‘score-bad’;
 
-  body.innerHTML = `
-    <div class="history-stats">
-      <div class="stat-card">
-        <div class="stat-num histoire-color">${totalSessions}</div>
-        <div class="stat-label">Sessions</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num ${avgScore >= 70 ? 'maths-color' : 'histoire-color'}">${avgScore}%</div>
-        <div class="stat-label">Score moyen</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num maths-color">${mathsSessions}</div>
-        <div class="stat-label">Sessions Maths</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num histoire-color">${histSessions}</div>
-        <div class="stat-label">Sessions Histoire</div>
-      </div>
-    </div>
-    <div class="section-title">Historique des sessions</div>
-    <div class="history-list">
-      ${hist.map(h => `
-        <div class="history-item">
-          <div class="history-badge ${h.subject}">${COURS[h.subject].icon}</div>
-          <div class="history-info">
-            <h4>${COURS[h.subject].label} · ${h.mode === 'qcm' ? 'QCM' : 'Questions ouvertes'}</h4>
-            <p>${h.date}</p>
-          </div>
-          <div class="history-score ${scoreClass(h.pct)}">${h.score}/${h.total}</div>
-        </div>`).join('')}
-    </div>
-    <button class="btn-clear" onclick="clearHistory()">🗑️ Effacer tout l'historique</button>
-  `;
+body.innerHTML = `<div class="history-stats"> <div class="stat-card"> <div class="stat-num histoire-color">${totalSessions}</div> <div class="stat-label">Sessions</div> </div> <div class="stat-card"> <div class="stat-num ${avgScore >= 70 ? 'maths-color' : 'histoire-color'}">${avgScore}%</div> <div class="stat-label">Score moyen</div> </div> <div class="stat-card"> <div class="stat-num maths-color">${mathsSessions}</div> <div class="stat-label">Sessions Maths</div> </div> <div class="stat-card"> <div class="stat-num histoire-color">${histSessions}</div> <div class="stat-label">Sessions Histoire</div> </div> </div> <div class="section-title">Historique des sessions</div> <div class="history-list"> ${hist.map(h =>`
+<div class="history-item">
+<div class="history-badge ${h.subject}">${COURS[h.subject].icon}</div>
+<div class="history-info">
+<h4>${COURS[h.subject].label} · ${h.mode === ‘qcm’ ? ‘QCM’ : ‘Questions ouvertes’}</h4>
+<p>${h.date}</p>
+</div>
+<div class="history-score ${scoreClass(h.pct)}">${h.score}/${h.total}</div>
+</div>`).join('')} </div> <button class="btn-clear" onclick="clearHistory()">🗑️ Effacer tout l'historique</button> `;
 }
 
 function clearHistory() {
-  if (confirm('Effacer tout l\'historique des sessions ?')) {
-    localStorage.removeItem('cm2_history');
-    renderHistory();
-  }
+if (confirm(‘Effacer tout l'historique des sessions ?’)) {
+localStorage.removeItem(‘cm2_history’);
+renderHistory();
+}
 }
 
 init();
 </script>
+
 </body>
 </html>
